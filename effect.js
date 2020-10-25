@@ -198,6 +198,7 @@ $('document').ready(function(){
 	$('#show-image').click(function(){
 		$(this).fadeOut('fast');
 		$('.balloons').fadeOut('fast');
+		$('.message').fadeOut('fast');
 		$('.cake').fadeOut('fast').promise().done(function(){
 			$('.slideshow-container').fadeIn('slow');
 		});
@@ -219,6 +220,7 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
+	console.log("hehe")
   var i;
   var slides = document.getElementsByClassName("mySlides");
   var dots = document.getElementsByClassName("dot");
