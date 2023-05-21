@@ -1,19 +1,39 @@
 body {
 	/*background-color: #FFDAB9;	*/
-	background-color: #000;
-	-webkit-transition:background-color linear 5s;
-	-moz-transition:background-color linear 5s;
-	-o-transition:background-color linear 5s;
-	-ms-transition:background-color linear 5s;
-	transition:background-color linear 5s;
+	/* background-color: #000; */
+	background-image: url("troitoi.jpg");
 	overflow-x:hidden;
+	object-fit: cover;
+	animation: troitoi linear 8s infinite;
+	/* overflow: hidden; */
+}
+
+@keyframes troitoi {
+	0%{
+		background-image: url("troitoi.jpg");
+	}
+	25%{
+		background-image: url("troitoi2.jpg");
+	}
+	50%{
+		background-image: url("troitoi.jpg");
+	}
+	75%{
+		background-image: url("troitoi2.jpg");
+	}
+	100%{
+		background-image: url("troitoi.jpg");
+	}
 }
 .container {
-	display: none;
+	/* display: none; */
 }
 .peach {
-	background-color: #FFDAB9;
-	
+	/* background-color: #FFDAB9; */
+	background-image: url("troisang.png");
+	background-repeat:initial;
+	background-attachment: fixed;
+	background-position: center;
 }
 .peach-after {
 	-webkit-animation:peach_alive linear 8s infinite;

@@ -1,0 +1,176 @@
+* {
+    box-sizing: border-box;
+}
+*::before, *::after {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    background: #fef8f9;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px;
+    justify-content: "center";
+}
+button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 20px 5px;
+    color: #3c376f;
+    font-size: 2rem;
+}
+button span {
+    position: relative;
+    display: inline-block;
+    transform: translateX(0);
+    transition: transform 0.3s ease;
+}
+.previous:hover span {
+    transform: translateX(-10px) scale(1.2);
+}
+.next:hover span {
+    transform: translateX(10px) scale(1.2);
+}
+.slider-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.slider-nav li {
+    display: flex;
+    flex: 2;
+    text-align: center;
+    justify-content: center;
+}
+.image {
+    max-width: 100%;
+    display: none;
+    box-shadow: 10px 10px 20px 0 rgba(94, 47, 59, 0.2);
+}
+img {
+    object-fit: contain;
+    height: 400px;
+}
+.image.active {
+    display: flex;
+    animation: fadeImg 0.8s;
+    /* height: 400px; */
+   height: 510px;
+    overflow: hidden;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.slider-nav .arrow {
+    flex: 0 0 15%;
+}
+.slider-nav a {
+    flex-basis: 100%;
+    display: flex;
+    align-items: center;
+}
+.slider-nav span {
+    display: block;
+    width: 100%;
+}
+@keyframes fadeImg {
+    from {
+        opacity: 0;
+   }
+    to {
+        opacity: 1;
+   }
+}
+
+.text {
+    margin: 10px 60px;
+    text-align: center;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #384b49;
+}
+
+.button_ring {
+    animation: shake 2s infinite, showButton 10s ease 0ms forwards;
+    margin: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    font-size: 12px;
+    color: white;
+    /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+    box-shadow: 0 0 10px #eee;
+    border-radius: 10px;
+    background-image: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 51%, #fbc2eb 100%);
+    pointer-events: all;
+    cursor: pointer;
+}
+
+.button_ring:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(2px, 1px) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(-1px, -2px) rotate(-2deg);
+    }
+
+    20% {
+        transform: translate(-3px, 0px) rotate(3deg);
+    }
+
+    30% {
+        transform: translate(0px, 2px) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(2px, 1px) rotate(-2deg);
+    }
+
+    80% {
+        transform: translate(-1px, -1px) rotate(4deg);
+    }
+
+    90% {
+        transform: translate(2px, 2px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
